@@ -1,0 +1,5 @@
+Iniciando a criação do projeto
+npx create-next-app
+yarn add typescript @types/react @types/node -D
+yarn add sass
+teste
