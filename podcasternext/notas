@@ -2,4 +2,8 @@ Iniciando a criação do projeto
 npx create-next-app
 yarn add typescript @types/react @types/node -D
 yarn add sass
+yarn add date-fns
+yarn add json-server -D
+iniciar o json server --> yarn server
+yarn add axios
 teste
