@@ -5,11 +5,16 @@ import { Player } from '../components/Player';
 
 import styles from '../styles/app.module.scss'
 import { PlayerContext } from '../contexts/PlayerContext';
+import { useState } from 'react';
 
 
 function MyApp({ Component, pageProps }) {
+  const [episodeList, setEpisodeList] = useState([]);
+  const [currentepisodeIndex, setCurrentEpisodeIndex] = useState(0);
+
+
   return (
-    <PlayerContext.Provider value={{ episodeList: [] }}>
+    <PlayerContext.Provider value={{ episodeList: [], currentEpisodeIndex: 0 }}>
       <div className={styles.wrapper}>
         <main>
           <Header />
