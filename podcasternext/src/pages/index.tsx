@@ -24,7 +24,7 @@ type Episode = {
   members: string;
   duration: number;
   durationAsString: string;
-  urlo: string;
+  url: string;
   publishedAt: string;
 }
 
