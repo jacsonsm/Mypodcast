@@ -6,4 +6,5 @@ yarn add date-fns
 yarn add json-server -D
 iniciar o json server --> yarn server
 yarn add axios
+yarn add rc-slider
 teste
