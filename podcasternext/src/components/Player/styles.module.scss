@@ -27,7 +27,7 @@
 
         align-self: stretch;
 
-        &.empty {
+        &.empty .progress {
             opacity: 0.5;
         }
     }
@@ -110,8 +110,11 @@
         border: 0;
         font-size: 0;
 
+        transition: filter 0.2s;
+
         &.disable {
             cursor: default;
+            opacity: 0.5;
         }
 
         &:hover:not(:disabled) {

@@ -1,7 +1,7 @@
 //SPA - SINGLE PAGE APLICATION -> dispara uma chamada quando algo ocorre na aplicação
 //SSR - SERVER SIDE RENDERING
 //SSG
-import { useContext } from 'react';
+//import { useContext } from 'react';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link'
@@ -10,7 +10,7 @@ import { format, parseISO } from 'date-fns';
 
 import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
-import { PlayerContext } from '../contexts/PlayerContext';
+import { usePlayer } from '../contexts/PlayerContext';
 
 import styles from './home.module.scss';
 
@@ -34,7 +34,7 @@ type HomeProps = {
 }
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
-  const { playList } = useContext(PlayerContext)
+  const { playList } = usePlayer()
 
   const episodeList = [...latestEpisodes, ...allEpisodes];
 

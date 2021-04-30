@@ -9,6 +9,8 @@ import { api } from '../../services/api';
 import styles from '../episodes/episode.module.scss'
 import Image from 'next/image';
 import Link from 'next/link';
+//import { useContext } from 'react';
+import { usePlayer } from '../../contexts/PlayerContext';
 
 type Episode = {
     id: string;
@@ -18,7 +20,7 @@ type Episode = {
     members: string;
     duration: number;
     durationAsString: string;
-    urlo: string;
+    url: string;
     publishedAt: string;
 };
 
@@ -31,6 +33,8 @@ export default function Episode({ episode }: EpisodeProps) {
     // if (router.isFallback) {
     //     return <p>Carregando...</p>
     // }
+    const { play } = usePlayer();
+
     return (
         <div className={styles.episode}>
             <div className={styles.thumbnailContainer}>
@@ -45,7 +49,7 @@ export default function Episode({ episode }: EpisodeProps) {
                     src={episode.thumbnail}
                     objectFit="cover"
                 />
-                <button type="button">
+                <button type="button" onClick={() => play(episode)}>
                     <img src="/play.svg" alt="Torcar episódios" />
                 </button>
             </div>
