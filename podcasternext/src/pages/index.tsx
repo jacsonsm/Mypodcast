@@ -4,7 +4,8 @@
 //import { useContext } from 'react';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
 import ptBR from 'date-fns/locale/pt-BR';
 import { format, parseISO } from 'date-fns';
 
@@ -41,6 +42,9 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
   //console.log(props.episodes)
   return (
     <div className={styles.homepage}>
+      <Head>
+        <title>Home | Podcast</title>
+      </Head>
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
 
