@@ -1,6 +1,6 @@
 # Mypodcast
 <h1 align="center">
-    <img alt="Podcastr" title="Podcastr" src=".github/podcastr.svg" />
+    <img alt="Podcastr" title="Podcastr" src="https://github.com/jacsonsm/Mypodcast/blob/main/podcasternext/public/logo.svg" />
 </h1>
 
 <br>
