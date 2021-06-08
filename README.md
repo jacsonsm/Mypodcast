@@ -5,9 +5,6 @@
 
 <br>
 
-<p align="center">
-  <img alt="Moveit" src=".github/icon.svg" width="160px">
-</p>
 
 ## 🧪 Technologies
 
